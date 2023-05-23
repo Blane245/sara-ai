@@ -1,76 +1,35 @@
-# Sara AI
+# Activity Structure
+## Activities
+| Item | Description |
+| uid | unique ID |
+| ActivityList | the key of the activity list that owns this ativity List |
+| Type | task, recurring task, calendar event, recurring calendar event |
+| recurrence pattern | null, or RecurEvery, DOYs, EndBy |
+| Status | Not Started, In Progress, Completed, Waiting for someone else,  Deferred |  
+| Priority | Low, Normal, High |
+| Name | the name of the item (no necessarily) unique |
+| DateAdded | the date/time the item eas added |
+| AddedBy | the user who added the item |
+| DateModified | the date/time of last modification |
+| Modified By | the user who updated teh item |
+| DueDate | null for appoint or not define, or the date the item is due |
+| RemainderTime | null if none, or TOD |
+| StartDateTime | null for task, or DateTime for appointment |
+| EndDateTime | null for task, or DateTime for appointment |
+## Activity List
+| Item | Description |
+| uid | unique ID|
+| Owner | the name of the user that owns the list (unique) |
+## Users
+| Item | Descripion |
+| uid | unique ID |
+| Name | the name of a person (unique) |
+## List Access
+The list of owners who can access a list ownned by someone else
+| Item | Description |
+| uid | unique ID|
+| ActivityList | the key of the activity list being accessed |
+| User | the key of the user given access |
+| AcccessType | read or write |
 
-working out an idea for an AI task, calendar, to-do list overall helpful assistant person. gotta pay for female voice so we're stucked with a gruff sounding sara helper.
 
-[Alan Ai](https://alan.app/docs)
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
