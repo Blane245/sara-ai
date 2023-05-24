@@ -71,6 +71,16 @@ Modify, display, and delete use cases available
 * only administrator can modify users
 * only one copy of a user can exist
 * modify the user anem and the activity list for the user in the database
+### Intent
+'Delete user $(NAME)'
+### Responses
+'You are not authorized to delete users from Sara'  
+'$(p.NAME) does not exist  
+'$(p.NAME) deleted'  
+### Processing
+* only administrator can delete users
+* user must exist
+* TODO use a confirmation dialog before allowing deletion
 ## Set Context
 ### Login context
 when user logs in, context is set to user's activity list, write
