@@ -1,3 +1,4 @@
+# Questions
 # Activity Structure
 These are the records that make up the sara-ai database. The primary entries are Activitiy lists and users. Each user may have one
 activity list. The list owner may grant access persmissions to other users. An activity list can consist of any number of activities. 
@@ -46,11 +47,30 @@ The list of owners who can access a list ownned by someone else
 | User | the key of the user given access |
 | AcccessType | read or write |
 # Use Cases
-## Add User
+## (Add, Modify, Delete) User
 performed by administrator. 
 Creates a user and Activity list record for the user
 Modify, display, and delete use cases available
-Display provides read access to user's activity list
+### Intent
+'Add user $(NAME)'
+### Responses
+'You are not authorized to add users to Sara'  
+'$(p.NAME) already exists  
+'$(p.NAME) added  
+### Processing
+* only administrator can add users
+* only one copy of a user can exist
+* Add the user and an activity list for the user to the data base
+### Intent
+'(Rename | Modify) user $(NAME) to $(NEWNAME)'
+### Responses
+'You are not authorized to modify users in Sara'  
+'$(p.NEWNAME) already exists  
+'$(p.NAME) renamed to (p.NEWNAME)'  
+### Processing
+* only administrator can modify users
+* only one copy of a user can exist
+* modify the user anem and the activity list for the user in the database
 ## Set Context
 ### Login context
 when user logs in, context is set to user's activity list, write
