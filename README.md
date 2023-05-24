@@ -70,14 +70,13 @@ user provides original name. Confirmation dialog occurs
 #### Set (task, event) (not started, in progress, completed, waiting, deferred)
 A short form of 'Change (task, event) priority'
 ## Activity display
-### List (all, not started, in progress, completed, waiting, deferred tasks) tasks
-## List events
+### (List, Say) (all, not started, in progress, completed, waiting, deferred tasks) tasks
+### (List, Say) (all, not started, in progress, completed, waiting, deferred tasks) events
 # Behaviors
 ## Not completed Task roll over
 All tasks that are not completed are in the list of tasks whose status is not completed for today even if their due date was in the past
 if DueDate is not defined, then it the task is assumed to be due today
 ## Reminder alert
 When a task or event has a reminder, an alert is sent to the user and remains active until acknowledged. This leads to a use case 'Remove reminder (id)' which will remove the reminder
-## 
 
 
