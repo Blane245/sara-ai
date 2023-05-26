@@ -81,10 +81,36 @@ Modify, display, and delete use cases available
 * only administrator can delete users
 * user must exist
 * TODO use a confirmation dialog before allowing deletion
-## Set Context
-### Login context
+## Nicknames
+Users may have nicknames. Anyone can add a nickname to anyone else, bu thte nickname must be unique.
+### Intent
+'Add $(NICKNAME) (for $(USERNAME) |)
+### Responses
+`$(NICKNAME) is already being used for $(USERNAME2)`
+`$(NICKNAME) added for you`
+`$(NICKNAME) added for $(USERNAME)`
+### Processing
+* Nickname must be unique
+* Nickname added to current user or named user
+### Intent
+'(Remove | delete) $(NICKNAME)'
+### Response
+`$(NICKNAME) does not exist`
+`$(NICKNAME) removed`
+### Processing
+* nickname must exist
+* nickname deleted
+## List Users
+This will list all users and their nicknames
+### Intent 
+'(list | show me | tell me) (all | ) users'
+### Responses
+for all defined users:
+* `$(USERNAME) has no nicknames`
+* `$(USERNAME) has nicknames $(NICKNAMELIST)`
+## Set activity list access
+### Login activity list
 when user logs in, context is set to user's activity list, write
-### Set list context
 ### Request to access another activity list
 context is set to named activiy list if user is authorized, read or write based on permission
 ## Set day context
