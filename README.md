@@ -35,6 +35,7 @@ A user may have zero or more nicknames
 | Item | Descripion |
 |------|-------------|
 | uid | unique ID |
+| OwnerName | name of the owner of this nickname |
 | Name | the name of a person |
 | Nickname | the nickname of the person |
 
